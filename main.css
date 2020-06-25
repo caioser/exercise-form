@@ -1,0 +1,183 @@
+body {margin:0;padding:0;} /* Padrão para retirar espaços brancos nas bordas */
+
+/* Definição da estrutura flexbox inicial dentro do formulário,
+iniciando com layout para tela pequena de até 469px de largura,
+para posteriormente adaptar para uma tela média e outra grande */
+.section {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    font-family: 'FontAwesome', Arial, Helvetica, sans-serif;
+}
+    .table {
+        box-sizing:border-box;
+        margin:10px;
+        width:700px;
+    }
+        .line {
+            font-size:12px;
+            margin:15px 0px;
+            display:flex;
+            flex-direction:column;
+        }
+            .col-container {
+                line-height:32px;
+            }   .col-container span {
+                    color: red;
+                }
+            
+            /* Variações de containers para inputs */
+            .input-container {
+                display: flex;
+                height: 34px;
+            }   .input-container input {
+                    position: relative;
+                    width:100%;
+                    border:1px solid black;
+                    border-radius:5px;
+                    padding:0px 5px;
+                }
+
+            .radio-container {
+                display: flex;
+                flex-direction:column;
+                line-height:30px;
+                justify-content:space-around;
+            }   .radio-container div {
+                    display:flex;
+                    align-items:center;
+                }
+            .check-container {
+                display: flex;
+                align-items:center;
+                margin-top:10px;
+                margin-bottom:20px;
+            }
+
+/* Definição do comprimento das tags input a partir do modelo em assets/img/cadastro.png */
+#cpf, #phone, #cellphone, #birth {width:70%;}
+#gender, #cep {width:60%;}
+#num {width:40%;}
+#complement {width:80%;}
+#state {width:30%;}
+
+/* Personalização dos inputs "select" e "submit"
+observado a possibilidade de inserir simbolos
+com font-awesome-4.7.0 */
+#gender {
+    background-color:white;
+    border:1px solid black;
+    border-radius:5px;
+    -moz-appearance: button;
+    -webkit-appearance:button;
+    outline:none;
+}   .inside-select {
+        display:block;
+        position:relative;
+        z-index:1;
+        margin:10px;
+        transform:translate(-27px);
+        pointer-events:none;
+    }
+
+/* Inicialmente foi tentado personalizar a tag <input type="submit">,
+mas devido a dificuldades de inserção dos símbolos, viu-se a possiblidade
+de usar a tag "button" ao invés de "input" */
+#submit {
+    background-color:#04fd85;
+    border:0px solid #04fd85;
+    border-radius:5px;
+    font-size:22px;
+    height:50px;
+    padding:0px 30px;
+    width:100%;
+    line-height:28px;
+}   .inside-submit {
+        margin-left:10px;
+    }
+
+/* Responsividade para telas médias, a partir de 470px até 989px de largura */
+@media screen and (min-width:470px) {
+    
+    .line {
+        flex-direction:row;
+    }
+
+    .col-container {
+        display:flex;
+        flex:5;
+    }   .col-container label {
+            flex:4;
+            text-align:right;
+        }
+        .col-container span {
+            flex:1;
+            text-align:center;
+        }
+
+    .input-container, .radio-container, .check-container {
+        flex:12;
+    }
+
+    .radio-container {
+        display: flex;
+        flex-direction:row;
+    }
+
+    #submit {
+        width:auto;
+    }
+    
+}
+
+/* Responsividade para telas grandes, de 990px pra cima */
+@media screen and (min-width:990px) {
+    form, header h1, .sub-container {
+        margin:auto;
+        max-width:1043px;
+    }
+    
+    .table {
+        flex:1;
+    }
+}
+
+
+
+/* Parte responsável pelos ícones usados
+ *!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+ @font-face {
+    font-family: 'FontAwesome';
+    src: url('assets/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .fa-caret-down:before {
+    content: "\f0d7";
+  }
+  .fa-chevron-right:before {
+    content: "\f054";
+  }
+
+
+
+/* Descomente para ver a linhas da estrutura */
+/*
+* {
+    outline-style:solid;  
+    outline-color:rgba(100, 135, 200, 0.5);
+    outline-width:thin;
+}*/

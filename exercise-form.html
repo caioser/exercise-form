@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <title>Form Excercise</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <form>
+        <!--Seção 1-->
+        <div class="section">
+            <!--E-mail-->
+            <div class="table">
+
+                <div class="line">
+                    <div class="col-container">
+                        <label for="email">E-mail</label>
+                        <span> * </span>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+
+                <div class="line">
+                    <div class="col-container">
+                        <label for="repeatemail">Repetir e-mail</label>
+                        <span> * </span>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="email" id="repeatemail" required>
+                    </div>
+                </div>
+            </div>
+            <!--Senha-->
+            <div class="table">
+
+                <div class="line">
+
+                    <div class="col-container">
+                        <label for="password">Crie uma senha</label>
+                        <span> * </span>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="password" id="password" required>
+                    </div>
+                </div>
+
+                <div class="line">
+
+                    <div class="col-container">
+                        <label for="repeatpass">Repetir senha</label>
+                        <span> * </span>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="password" id="repeatpass" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Seção 2-->
+        <div class="section">
+            <!--Dados cadastrais-->
+            <div class="table">
+
+                <h3>Dados Cadastrais</h3>
+                    <!--Pessoa física ou Jurídica-->
+                    <div class="line">
+
+                        <div class="col-container"></div>
+                        <div class="radio-container">
+                            <div>
+                                <input type="radio" id="pf" name="pfpj">
+                                <label class="label" for="pf">Pessoa Física</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="pj" name="pfpj">
+                                <label class="label" for="pj">Pessoa Jurídica</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Nome-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="fname">Nome</label>
+                            <span> * </span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="fname" required>
+                        </div>
+                        <br>
+                    </div>
+                    <!--Sobrenome-->
+                    <div class="line">
+                        <div class="col-container">
+                            <label for="lname">Sobrenome</label>
+                            <span> * </span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="lname" required>
+                        </div>
+                        <br>
+                    </div>
+                    <!--Gênero-->
+                    <div class="line">
+                        <div class="col-container">
+                            <label for="gender">Sexo</label>
+                            <span> * </span>
+                        </div>
+
+                        <div class="input-container">
+                            <select id="gender" name="gender" required>
+                                <option value="">Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                            <i class="fa fa-caret-down inside-select" aria-hidden="true"></i>
+                        </div>
+                        <br>
+                    </div>
+                    <!--CPF-->
+                    <div class="line">
+                        <div class="col-container">
+                            <label for="cpf">CPF</label>
+                            <span> * </span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="cpf" required>
+                        </div>
+                        <br>
+                    </div>
+                    <!--Telefone-->
+                    <div class="line">
+                        <div class="col-container">
+                            <label for="phone">Telefone</label>
+                            <span> * </span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="phone" required>
+                        </div>
+                        <br>
+                    </div>
+                    <!--Celular-->
+                    <div class="line">
+                        <div class="col-container">
+                            <label for="cellphone">Celular</label>
+                            <span></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="cellphone">
+                        </div>
+                        <br>
+                    </div>
+                    <!--Nascimento-->
+                    <div class="line">
+                        <div class="col-container">
+                            <label for="birth">Nascimento</label>
+                            <span> * </span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="date" id="birth" required>
+                        </div>
+                        <br>
+                    </div>
+                    <!--Ofertas Novidades-->
+                    <div class="line">
+                        <div class="col-container"></div>
+                        <div class="check-container">
+                            <input type="checkbox" id="offers">
+                            <label class="label" for="offers">Receber ofertas e novidades por email</label>
+                        </div>
+                    </div>
+            </div>
+            <!--Endereço-->
+            <div class="table">
+
+                <h3>Endereço de entrega</h3>
+                    <!--CEP-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="cep">CEP</label>
+                            <span></span>
+                        </div>
+                    
+                        <div class="input-container">
+                            <input type="text" id="cep">
+                        </div><br>
+                    </div>
+                    <!--Rua-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="street">Rua</label>
+                            <span></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="street">
+                        </div><br>
+                    </div>
+                    <!--Número-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="num">Número</label>
+                            <span></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="num">
+                        </div><br>
+                    </div>
+                    <!--Caso sem número-->
+                    <div class="line">
+
+                        <div class="col-container"></div>
+                        <div class="check-container">      
+                            <input type="checkbox" id="nonum">
+                            <label class="label" for="nonum">Sem número</label>
+                            <br>
+                        </div>
+                    </div>
+                    <!--Complemento-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="complement">Complemento</label>
+                            <span></span>
+                        </div>
+                    
+                        <div class="input-container">
+                            <input type="text" id="complement">
+                        </div><br>
+                    </div>
+                    <!--Referência-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="ref">Referência</label>
+                            <span></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="ref">
+                        </div><br>
+                    </div>
+                    <!--Bairro-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="neighbor">Bairro</label>
+                            <span></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="neighbor">
+                        </div><br>
+                    </div>
+                    <!--Cidade-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="city">Cidade</label>
+                            <span></span>
+                        </div>
+                        
+                        <div class="input-container">
+                            <input type="text" id="city">
+                        </div><br>
+                    </div>
+                    <!--Estado-->
+                    <div class="line">
+
+                        <div class="col-container">
+                            <label for="state">Estado</label>
+                            <span></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" id="state">
+                        </div><br>
+                    </div>
+            </div>
+        </div>
+        <!--Seção 3-->
+        <div class="section">
+            <!--Botão enviar-->
+            <div class="table">
+                <div class="line">
+                    <div class="col-container"></div>
+                    <div id="input-container" class="input-container">
+                        <button id="submit" type="submit">Cadastrar
+                            <i class="fa fa-chevron-right inside-submit" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="table"></div>
+        </div>
+    </form>    
+</body>
+</html>
